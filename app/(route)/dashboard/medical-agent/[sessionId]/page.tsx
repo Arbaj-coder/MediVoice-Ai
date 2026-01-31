@@ -100,7 +100,7 @@ function MedicalVoiceAgent() {
         model: "gpt-4",
         messages: [
           {
-            role: "system",
+            role: "system" as const,
             content: sessionDetail.SelectedDoctor.agentPrompt,
           },
         ],
