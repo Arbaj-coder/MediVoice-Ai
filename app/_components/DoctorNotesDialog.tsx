@@ -14,8 +14,8 @@ import { Button } from "@/components/ui/button";
 
 type DoctorNote = {
   id: number;
-  doctor_name: string;
-  doctor_email: string;
+  doctorName: string;
+  doctorEmail: string;
   note: string;
   created_at: string;
 };
