@@ -83,7 +83,7 @@ function MedicalVoiceAgent() {
     const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_API_KEY!);
     vapiRef.current = vapi;
 
-    const config = {
+    const config : CreateAssistantDTO = {
       name: "AI Medical Doctor Voice Agent",
       firstMessage:
         "Hi there! I am your AI medical assistant. How are you feeling today?",
