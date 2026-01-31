@@ -7,7 +7,7 @@ import { doctorAgent } from "../../_components/DoctorAgentCard";
 import { Circle, Loader, PhoneCall, PhoneOff } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Vapi, { type CreateAssistantDTO } from "@vapi-ai/web";
+import Vapi from "@vapi-ai/web";
 import { toast } from "sonner";
 
 export type SessionDetail = {
@@ -83,20 +83,20 @@ function MedicalVoiceAgent() {
     const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_API_KEY!);
     vapiRef.current = vapi;
 
-    const config : CreateAssistantDTO = {
+    const config  = {
       name: "AI Medical Doctor Voice Agent",
       firstMessage:
         "Hi there! I am your AI medical assistant. How are you feeling today?",
       transcriber: {
-        provider: "assembly-ai",
+        provider: "assembly-ai" as const,
         language: "en",
       },
       voice: {
-        provider: "11labs",
+        provider: "11labs" as const,
         voiceId: "Sarah",
       },
       model: {
-        provider: "openai",
+        provider: "openai" as const,
         model: "gpt-4",
         messages: [
           {
