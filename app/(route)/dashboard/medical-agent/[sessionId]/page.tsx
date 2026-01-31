@@ -97,7 +97,7 @@ function MedicalVoiceAgent() {
       },
       model: {
         provider: "openai" as const,
-        model: "gpt-4",
+        model: "gpt-4" as const,
         messages: [
           {
             role: "system" as const,
