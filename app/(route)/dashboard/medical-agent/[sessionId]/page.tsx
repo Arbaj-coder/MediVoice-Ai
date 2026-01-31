@@ -7,7 +7,7 @@ import { doctorAgent } from "../../_components/DoctorAgentCard";
 import { Circle, Loader, PhoneCall, PhoneOff } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Vapi from "@vapi-ai/web";
+import Vapi, { type CreateAssistantDTO } from "@vapi-ai/web";
 import { toast } from "sonner";
 
 export type SessionDetail = {
