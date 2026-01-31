@@ -89,7 +89,7 @@ function MedicalVoiceAgent() {
         "Hi there! I am your AI medical assistant. How are you feeling today?",
       transcriber: {
         provider: "assembly-ai" as const,
-        language: "en",
+        language: "en" as const ,
       },
       voice: {
         provider: "11labs" as const,
