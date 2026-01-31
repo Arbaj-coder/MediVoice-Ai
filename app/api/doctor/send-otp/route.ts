@@ -3,7 +3,7 @@ import { db } from "@/config/db";
 import { doctorAccessTable } from "@/config/schema";
 import { addMinutes } from "date-fns";
 import nodemailer  from "nodemailer"
-export const transporter = nodemailer.createTransport({ service: "gmail", auth: { user: process.env.NEXT_PUBLIC_EMAIL_USER, pass: process.env.NEXT_PUBLIC_EMAIL_PASS, }, });
+const transporter = nodemailer.createTransport({ service: "gmail", auth: { user: process.env.NEXT_PUBLIC_EMAIL_USER, pass: process.env.NEXT_PUBLIC_EMAIL_PASS, }, });
 
 export async function POST(req: NextRequest) {
   const { doctorName, doctorEmail, patientEmail } = await req.json();
